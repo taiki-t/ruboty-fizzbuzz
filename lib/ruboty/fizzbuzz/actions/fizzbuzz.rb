@@ -3,7 +3,7 @@ module Ruboty
     module Actions
       class Fizzbuzz < Ruboty::Actions::Base
         def call
-          message.reply('dummy')
+          message.reply(fizzbuzz)
         end
 
         private
@@ -17,9 +17,9 @@ module Ruboty
           end
         end
 
-        def fizzbuzz? ->(v){v % 15 ==0}; end
-        def buzz? ->(v) {v % 5 == 0}; end
-        def fizz? ->(v) {v % 3 == 0}; end
+        def fizzbuzz?; ->(v){v % 15 ==0}; end
+        def buzz?; ->(v) {v % 5 == 0}; end
+        def fizz?; ->(v) {v % 3 == 0}; end
       end
     end
   end
